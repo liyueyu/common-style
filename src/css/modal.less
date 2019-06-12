@@ -1,0 +1,83 @@
+// 通用的modal 窗口容器组件样式
+
+.ui-modal {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .ui-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(34,33,52,.6);
+    }
+}
+.ui-modal-close {
+    float: right;
+    color: #C2CBD0;
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+    font-size: 12px;
+    &:hover {
+        color: #646B6E;
+    }
+}
+.ui-modal-wrapper {
+    z-index:2;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+}
+.ui-modal-body {
+    height: 100%;
+    width: 100%;
+    padding-top: 48px;
+}
+.ui-modal-content-wrap {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+.ui-modal-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: left;
+    font-size: 14px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+    border-bottom: 1px solid #e1eaf1;
+}
+.ui-modal-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 58px;
+    padding: 14px 16px;
+    text-align: right;
+    font-size: 0;
+    .ui-btn {
+        margin: 0 0 0 20px;
+        vertical-align: middle;
+    }
+    &.btn-center {
+        text-align: center;
+        .ui-btn {
+            margin: 0 10px;
+        }
+    }
+}

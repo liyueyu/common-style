@@ -1,0 +1,41 @@
+@import "theme";
+@btnMinWidth: 96px;
+@btnBgGray: #e9ecf1;
+.btnColor(@btnColor) {
+  background-color: @btnColor;
+  &:hover {
+    background-color: darken(@btnColor, 4%);
+  }
+  &:active {
+    background-color: darken(@btnColor, 8%);
+  }
+}
+.ui-btn {
+  cursor: pointer;
+  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #fff;
+  background-color: @theme;
+  border-radius: @borderRadius;
+  &:not(.disabled) {
+    .btnColor(@theme)
+  }
+  &-gray:not(.disabled) {
+    color: @color;
+    .btnColor(@btnBgGray)
+  }
+  &:not(.small-btn) {
+    min-width: @btnMinWidth;
+  }
+  &.small-btn {
+    min-width: auto;
+    line-height: 20px;
+    padding: 2px 10px;
+  }
+  &.disabled {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+}
