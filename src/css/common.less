@@ -4,6 +4,9 @@
 */
 
 // text
+.text-normal {
+  color: @color;
+}
 .text-theme {
   color: @theme;
 }
@@ -105,8 +108,8 @@
 
 ::-webkit-scrollbar {
   overflow: visible;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-button {
@@ -114,12 +117,12 @@
   height: 0;
 }
 ::-webkit-scrollbar-track {
-  background-color:#fff;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  border-color: #fff;
+  border-color: #c2cbd0;
   border-width: 2px;
   border-style: solid;
   background-color:#c2cbd0;
@@ -134,5 +137,10 @@
 }
 
 ::-webkit-scrollbar-corner {
-  background: #fff;
+  background: transparent;
+}
+
+// text core
+.inline-text-block { // 内联文字块+hover出现删除符号
+
 }
