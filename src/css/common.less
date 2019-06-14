@@ -1,9 +1,138 @@
+/*
 
+
+*/
+
+// text
+.text-theme {
+  color: @theme;
+}
+.text-red {
+  color: @red; // require，error, warn
+}
+.text-tips {
+  color: @textTips;
+}
+.text-secondary {
+  color: @textSecondary;
+}
+.text-file {
+  color: @textFile;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-hover-theme {
+  &:hover {
+    cursor: pointer;
+    color: @theme;
+  }
+}
+.text-disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+// float
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
+}
+.float-none {
+  float: none;
+}
+
+// clear float
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden
+}
+.clearfix:after {
+  clear: both
+}
+.clearfix {
+  zoom: 1
+}
+
+// scroll 滚动相关
 .scroll-auto {
   overflow: auto;
 }
-// 缓冲滚动
-.scrolling-touch {
+.scrolling-touch { // 缓冲滚动
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
+}
+
+// 边线
+.border-b {
+  border-bottom: 1px solid @borderColor;
+}
+.border-r {
+  border-right: 1px solid @borderColor;
+}
+.border-t {
+  border-top: 1px solid @borderColor;
+}
+.border-l {
+  border-left: 1px solid @borderColor;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.ellipsis-2 {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+
+// 滚动条重置
+
+::-webkit-scrollbar {
+  overflow: visible;
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-track {
+  background-color:#fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  background-color:#c2cbd0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #98a1a8;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #748089;
+}
+
+::-webkit-scrollbar-corner {
+  background: #fff;
 }
