@@ -142,5 +142,21 @@
 
 // text core
 .inline-text-block { // 内联文字块+hover出现删除符号
-
+  line-height: normal;
+  .text-content {
+    display: inline-block;
+    max-width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &_del {
+    cursor: pointer;
+    font-size: 12px;
+    color: @red;
+    padding-left: 4px;
+    &:hover {
+      opacity: .8;
+    }
+  }
 }

@@ -1,7 +1,10 @@
 <template>
     <div class="">
         <div class="style-wrap text-wrap">
-            <div class="inline-text-block">默认删除块</div>
+            <div class="inline-text-block">
+                <div class="text-content">默认删除块</div>
+                <span class="inline-text-block_del ui-icon ui-close-block"></span>
+            </div>
         </div>
         <div class="style-wrap text-wrap">
             <div class="text-normal">默认正文</div>
