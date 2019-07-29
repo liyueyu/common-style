@@ -1,0 +1,94 @@
+@borderRadius: 4px;
+@color-gray: #8E8CA4;
+@color-white: #D4D3E5;
+@color-yellow: #F59C25;
+@color-yellow-hover: #FF9200;
+@color-red: #F35959;
+@color-bg: #444259;
+@color-input-bg: #3F3D54;
+@color-input-border: #525065;
+@color-tips-bg: #2C2A3F;
+@placeholder-color: #9FA4A6;
+@dark-placeholder-color: #8e8ca4;
+
+// 表单控件placeholder
+.is-placeholder (@ph-color){
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+        color: @ph-color !important;
+    }
+    input:-moz-placeholder, textarea:-moz-placeholder {
+        color: @ph-color !important;
+    }
+    input::-moz-placeholder, textarea::-moz-placeholder {
+        color: @ph-color !important;
+    }
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+        color: @ph-color !important;
+    }
+}
+
+.is-placeholder(@placeholder-color);
+
+/*输入框通用样式*/
+input,
+textarea{
+    height: 30px;
+    padding: 0 12px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #D5E2EC;
+    border-radius: @borderRadius;
+    &:hover {
+        border-color: #BBCAD6;
+    }
+    &:focus{
+        background-color: #fff;
+        border: 1px solid #F59C25;
+    }
+    &.error {
+        color: #3d464a;
+        background-color: rgba(243,89,89,0.2);
+        border: 1px solid #F35959;
+        box-shadow: 0 0 4px 0 rgba(243,89,89,0.25);
+    }
+}
+textarea {
+    padding: 8px 12px;
+    height: 90px;
+    resize: none;
+}
+
+// 暗色背景下的表单控件
+.dark {
+    .is-placeholder(@dark-placeholder-color);
+    input,
+    textarea{
+        color: #fff;
+        background-color: @color-input-bg;
+        border: 1px solid @color-input-border;
+        &:hover {
+            background-color: #3B3950;
+        }
+        &:focus{
+            border: 1px solid @color-yellow;
+            background-color:  #3B3950;
+        }
+        &.error {
+            color: #3d464a;
+            background-color: rgba(243,89,89,0.2);
+            border: 1px solid #F35959;
+            box-shadow: 0 0 4px 0 rgba(243,89,89,0.25);
+        }
+    }
+}
+
+.not-dark {
+    input,textarea {
+        color: #3D464A;
+        background-color: #fff;
+        border: 1px solid #D5E2EC;
+        &:hover,&:focus {
+            background-color: #fff;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+// var
+@darkCoreBorderColor: #434159;
+@darkColor: #D4D3E5;
+@darkBoderColor: #8E8CA4;
+@textNormalColor: #3D464A;
+@themeColor: #F59C25;
+@borderNormalColor: #A8B6C9;
+
+// radio and checkbox
+
+.radio-box,.checkbox-box {
+    display: inline-block;
+    font-size: 0;
+    line-height: normal;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+    vertical-align: top;
+      .core {
+        position: absolute;
+        left: 0;
+        top: 1px;
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        border: 1px solid @borderNormalColor;
+        &:after {
+          display: none;
+        }
+  }
+  .label {
+    font-size: 12px;
+  }
+  &:hover .core {
+    border: 1px solid @themeColor;
+  }
+  .radio,.checkbox {
+    display: none;
+    position: absolute;
+    &:checked+.core{
+      border: 1px solid @themeColor;
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.radio-box .core:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #F59C25;
+  border-radius: 50%;
+}
+
+.checkbox-box{
+  .checkbox {
+    &:checked+.core{
+      background-color: @themeColor;
+    }
+  }
+    .core {
+        border-radius: 2px;
+    }
+  .core:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 4px;
+    border-width: 0 0 1px 1px;
+    border-color: #fff;
+    border-style: solid;
+    //background-color: #F59C25;
+    transform: rotate(-45deg);
+  }
+}
+
+// disabled 下的单选和多选
+.disabled {
+    .radio-box,.checkbox-box {
+        cursor: not-allowed;
+        .core {
+            border-color: #e1eaf1;
+            background: #EEF3F7;
+            &:after {
+                border-color: #BACBD5;
+            }
+        }
+        .label {
+            color: #B9C7D2;
+        }
+    }
+    .checkbox-box .checkbox:checked + .core {
+        background: #EEF3F7;
+        border-color: #e1eaf1;
+    }
+}
+
+
+// 是否灰色背景下的选择器控件
+.isDark(@dC,@dBC,@dCBC) {
+    .label {
+        color: @dC;
+    }
+    .radio-box {
+        .core {
+            border-color: @dBC;
+        }
+    }
+    .checkbox-box {
+        .core {
+            border-color: @dBC;
+            &:after{
+                border-color: @dCBC;
+            }
+        }
+    }
+}
+
+.dark {
+    .isDark (@darkColor,@darkBoderColor,@darkCoreBorderColor);
+}
+.not-dark {
+    .isDark (@textNormalColor,@borderNormalColor,#fff);
+}

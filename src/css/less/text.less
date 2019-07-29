@@ -1,0 +1,252 @@
+@themeColor: #F59C25;
+@themeColorHover: #FF9200;
+@red-color:#f15a59;
+/* 文本相关的样式方式 */
+
+// ‘键值对’类型【例如：审批模板ID: 9C8ABD77-9EEF-042B-4EEB-FD7C513A76BB】
+.key-text {
+  display: flex;
+  margin-bottom: 20px;
+  .label {
+    color: #738089;
+    width: 110px;
+    text-align: right;
+  }
+  .value {
+    flex: 1;
+    padding-left: 15px;
+  }
+}
+
+// '内联结构块+可删除'
+
+.inline-text-block {
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    padding: 2px 26px 2px 10px;
+    background: #EEF2F7;
+    border: 1px solid #E1EAF1;
+    border-radius: 4px;
+    line-height: 20px;
+    .del-text-block {
+        position: absolute;
+        line-height: 20px;
+        font-size: 12px;
+        color: #c2cbd0;
+        right: 7px;
+        top: 2px;
+        cursor: pointer;
+        &:hover {
+          color: #b2bbbf;
+        }
+  }
+}
+
+// 线性内联标签块+可删除
+.inline-text-tag {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border-radius: 4px;
+    line-height: 20px;
+    border: 1px solid #E1EAF1;
+    position: relative;
+    cursor: pointer;
+    .del-inline-text-tag {
+        position: absolute;
+        display: none;
+        right: -5px;
+        top: -5px;
+        font-size: 12px;
+        color: @red-color;
+    }
+    &:hover .del-inline-text-tag{
+        display: block;
+        cursor: pointer;
+    }
+    &.add-text-tag {
+        cursor: pointer !important;
+        border-style: dashed;
+        border-color: #A8B6C9;
+        color: @themeColor;
+        .cf-icon {
+            font-size: 13px;
+            margin-right: 4px;
+        }
+        &:hover {
+            border-color: @themeColor;
+        }
+    }
+}
+// 自定义审批意见块
+.side-r-panel-wrap .personal-opinion-bar {
+    margin: 0 0 0 114px;
+}
+.personal-opinion-bar {
+    font-size: 12px;
+    padding-top: 15px;
+    .inline-text-tag {
+        margin: 10px 10px 0 0;
+        padding: 2px 5px;
+        min-width: 48px;
+        max-width: 60px;
+        text-align: center;
+        &:hover,&.active {
+            color: #f59c25;
+            border-color: #f59c25;
+        }
+    }
+    &>span:last-child .inline-text-tag {
+        margin-right: 0;
+    }
+}
+// 文字链接
+
+.text-link {
+  cursor: pointer;
+  text-decoration: none;
+  color:@themeColor;
+  &:hover {
+    color: @themeColorHover;
+  }
+}
+
+//文字设置
+.text-action {
+    cursor: pointer;
+    text-decoration: none;
+    color: #3D464A;
+    .cf-icon {
+        color: #98A1A8;
+        margin-right: 4px;
+    }
+    &:hover {
+        color: @themeColorHover;
+        .cf-icon {
+            color: @themeColorHover;
+        }
+    }
+}
+// 加号配文字
+.text-btn-add {
+    font-size: 12px;
+    color: #F59C25;
+    line-height: 30px;
+    cursor: pointer;
+    &.disabled {
+        color: #C2CBD0;
+        cursor: not-allowed;
+    }
+}
+
+// 说明控件块状灰色底
+.tips-text-block {
+    background: #F8F9FB;
+    font-size: 12px;
+    padding: 12px;
+    color: #646B6E;
+    line-height: 18px;
+    border-radius: 4px;
+    .text-strong {
+        color: #000;
+    }
+    strong {
+        font-weight: bold;
+    }
+    .text-right .text-link {
+        margin-top: 10px;
+        display: inline-block;
+    }
+}
+
+// 升级提示
+.up-tips-bar {
+    background: #FFF5EA;
+    border: 1px solid #FFDEB1;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #3D464A;
+    font-size: 12px;
+}
+.text-tag{
+    display: inline-block;
+    transform: scale(.8);
+    line-height: 20px;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #4598F0;
+    border: 1px solid #4598F0;
+    border-radius: 2px;
+    background-color: #fff;
+    .cf-icon {
+        font-size: 14px;
+    }
+    &-block {
+        padding: 0 10px;
+        color: #fff;
+        background-color: #4598F0;
+    }
+    &-gray,
+    &-unread {
+        color: #98a1a8;
+        border-color: #98a1a8;
+    }
+    &-doing {
+        color: #F59C25;
+        border-color: #F59C25;
+        background-color: white;
+    }
+}
+// 主题色提示
+.theme-color-tips {
+    border-radius: 4px;
+    font-size: 12px;
+    background: #FFF5EA;
+    padding: 10px;
+    line-height: normal;
+    .cf-icon {
+        color: #f59c25;
+    }
+}
+// 线性标签块可删除
+.label-block {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    height: 24px;
+    line-height: 22px;
+    border: 1px solid #f59c25;
+    padding: 0 30px 0 10px;
+    color: #f59c25;
+    border-radius: 15px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 140px;
+    &.ALL {
+        padding-right: 10px;
+        .cf-close {
+            display: none;
+        }
+    }
+    .cf-close {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
+
+.text-disabled{
+    opacity: .6;
+    cursor: not-allowed;
+}

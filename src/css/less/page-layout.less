@@ -1,0 +1,380 @@
+// 审批页面大体布局通用布局区块
+
+.cf-page {
+    position: relative;
+    height: 100%;
+    min-width: 1060px;
+    background-color: #fff;
+    &.initiating-approval-page,
+    &.bg-gray-page
+    {
+        background-color: #f8f9fb;
+    }
+    .cf-page-header {
+        position: relative;
+        z-index: 2;
+        padding: 0 30px;
+        height: 64px;
+        line-height: 64px;
+        background: #fff;
+        box-shadow: 0 2px 2px 0 rgba(66,64,86,.05);
+        h1 {
+            font-weight: normal;
+            font-size: 18px;
+            .title {
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            small {
+                padding-left: 10px;
+                color: #646B6E;
+                font-size: 12px;
+                font-weight: normal;
+            }
+            .search-wrap {
+                display: inline-block;
+                width: 220px;
+                padding: 12px 0;
+                font-weight: normal;
+            }
+        }
+        &>.cf-icon {
+            font-size: 16px;
+            margin-right: 8px;
+            cursor: pointer;
+            color: #98a1a8;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .sp-create-approval {
+            margin-left: 10px;
+            height: 38px;
+            line-height: 36px;
+        }
+    }
+    .cf-page-content {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+    }
+}
+// 纵向排列，自适应内容
+.cf-flex-direction-column {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+// 筛选器栏,高级筛选器，其他不需要自适应的操作栏
+.cf-filter-bar,.cf-flex-none-bar {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin: 10px 0;
+}
+.cf-filter-bar {
+    font-size: 0;
+}
+.cf-flex-content-wrap {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    position: relative;
+}
+// 分页器在底部
+.cf-list-page-bar {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    line-height: 24px;
+    text-align: right;
+    .page-control {
+        font-size: 12px;
+        margin: 20px;
+    }
+}
+.loading-bar {
+    text-align: center;
+    padding: 0 25px;
+    font-size: 12px;
+    line-height: 64px;
+    .icon-loading {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: transparent url("~assets/loading.svg") no-repeat center center / contain;
+        &:before {
+            content: '';
+        }
+    }
+    .text,.icon-loading {
+        vertical-align: middle;
+    }
+    &.loading-more{
+        margin: 0;
+        font-size: 12px;
+        padding: 0;
+        height: 44px;
+        line-height: 44px;
+        background-color: #fff;
+    }
+}
+// 筛选器栏下的表单控件
+.cf-filter-bar {
+    .form-item-size {
+        width: 33.33%;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        &.filter-date-picker-size {
+            width: 40%;
+            .el-input__icon+.el-input__inner {
+                padding-right: 12px;
+            }
+            .el-date-editor.el-input {
+                width: 120px;
+            }
+            .connector {
+                padding: 0 6px;
+                vertical-align: top;
+                line-height: 30px;
+                height: 30px;
+                display: inline-block;
+            }
+        }
+        .form-item > .label {
+            width: 95px;
+            padding-left: 8px;
+        }
+    }
+    .filter-action-btn-group {
+        float: right;
+        text-align: right;
+        padding: 10px 20px 10px 0;
+        .btn:not(:first-child) {
+            margin-left: 12px;
+        }
+    }
+}
+//高级筛选栏和普通筛选栏
+.senior-filter-bar,.normal-filter-bar {
+    background: rgba(244,246,250,0.50);
+    border: 1px solid #E1EAF1;
+    border-radius: 6px;
+    margin: 0 20px 20px;
+    position: relative;
+    .filter-btn-bar {
+        padding: 12px 20px;
+        border-top: 1px dashed #E1EAF1;
+        .btn {
+            margin-right: 10px;
+        }
+        .text-link {
+            font-size: 12px;
+            margin-right: 15px;
+            line-height: 30px;
+            vertical-align: middle;
+            display: inline-block;
+            .cf-icon {
+                display: inline-block;
+                transform:scale(0.76);
+            }
+        }
+
+    }
+}
+.senior-filter-bar {
+    .form-item {
+        min-height: 60px;
+        padding: 0 20px 0 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.normal-filter-bar {
+    .form-item-size {
+        display: inline-block;
+        vertical-align: top;
+        .form-item > .label {
+            width: auto;
+        }
+        .form-item-box.select {
+            width: 100%;
+        }
+    }
+}
+.normal-search-panel-height .senior-filter-item-wrap {
+    max-height: 185px;
+    overflow: auto;
+}
+// 审批分类列表
+.cf-flex-direction-column.has-category-panel {
+    margin-left: 220px;
+}
+// 审批中心表格的容器
+.approval-list-table-wrap {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left:20px;
+    right: 20px;
+    .el-table,.el-table th.is-leaf,.el-table__fixed-right-patch {
+        border: none;
+    }
+    .el-table__row.hover-row {
+        cursor: pointer;
+    }
+    .cell .el-checkbox {
+        margin-left: 8px;
+    }
+
+    .el-table td {
+        height: 64px;
+        max-height: 64px;
+    }
+    .td-content-ellipsis {
+        float: left;
+        .ellipsis-2 {
+            max-height: 40px;
+            line-height: 20px;
+        }
+    }
+    .icon-help {
+        color:#98a1a8;
+        font-size: 14px;
+        &:hover {
+            color: #f59c25;
+        }
+    }
+    .td-state {
+        color: #F59C25;
+        &.done {
+            color: #289e79;
+        }
+        &.doing {
+            color: #F59C25;
+        }
+        &.return {
+            color: #F35959;
+        }
+        &.normal {
+            cursor: pointer;
+        }
+    }
+}
+// 二层菜单
+.cf-list-menu {
+    &-title,&-group-item {
+        font-size: 12px;
+        cursor: pointer;
+        line-height: 20px;
+        padding: 10px 5px 10px 50px;
+        &:hover,&.active {
+            color: #F59C25;
+            background: #F1F3F7;
+        }
+    }
+    &-title {
+        font-size: 14px;
+        padding-left:36px;
+        .cf-icon {
+            font-size: 12px;
+            margin-left: -20px;
+            margin-right: 4px;
+            color: #98a1a8;
+            transform: scale(0.76);
+            display: inline-block;
+        }
+    }
+}
+@media screen and (min-width: 1550px){
+    .cf-filter-bar {
+        .form-item-size {
+            width: 25%;
+            display: inline-block;
+            &.filter-date-picker-size {
+                width: 33.2%;
+                .el-date-editor.el-input {
+                    width: 145px;
+                }
+            }
+        }
+    }
+}
+//
+//.el-table:not(.hasScrollX) {
+//    .el-table__fixed-right, .el-table__fixed {
+//        box-shadow: none;
+//    }
+//}
+//.el-table:not(.hasScrollY) {
+//    height: auto !important;
+//}
+
+
+// 超时单据页面样式
+.personnel-analysis-search-panel {
+    .select-field-component {
+        width: 25%;
+        padding-left: 12px;
+    }
+    .terms-dateRange-field-component {
+        margin-left: -20px;
+        width: 24%;
+        .form-item > .label {
+            display: none;
+        }
+    }
+    .form-item-size {
+        max-width: 300px;
+        .form-item > .label {
+            width: auto;
+            white-space: nowrap;
+        }
+    }
+    .el-icon-close:before {
+        content: "\e8e8";
+    }
+}
+.personnel-analysis-page {
+    .el-table .cell, .el-table th > div {
+        white-space: nowrap;
+        padding: 6px 12px;
+    }
+    .el-table td,.el-table th {
+        &.is-center {
+            text-align: left;
+        }
+    }
+
+    .approval-list-table-wrap .el-table td {
+        height: auto;
+        max-height: none;
+    }
+}

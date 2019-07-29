@@ -1,0 +1,152 @@
+// 基础table定义
+.cf-normal-table {
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-bottom: 1px solid #e1eaf1;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    thead {
+        tr th{
+            background: #EEF2F7;
+            &:first-child {
+                border-top-left-radius: 4px;
+                border-left: 1px solid #e1eaf1;
+            }
+            &:last-child {
+                border-top-right-radius: 4px;
+            }
+        }
+    }
+    tbody {
+        tr:hover {
+            background: #F4F7FA;
+        }
+    }
+    td,th {
+        border-width: 1px 1px 0 0;
+        border-color: #e1eaf1;
+        border-style: solid;
+        line-height: 16px;
+        padding: 6px 12px;
+        min-height: 44px;
+        height: 44px;
+    }
+    tr td:first-child {
+        border-left: 1px solid #e1eaf1;
+    }
+    &.radius-tbody{
+        border-bottom: 0;
+        tbody tr:first-child td:first-child {
+            border-radius: 4px 0 0 0;
+        }
+        tbody tr:first-child td:last-child {
+            border-radius: 0 4px 0 0;
+        }
+        tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 4px;
+        }
+        tbody tr:last-child td:last-child {
+            border-radius: 0 0 4px 0;
+        }
+        tbody tr:last-child td{
+            border-bottom: 1px solid #e1eaf1;
+        }
+    }
+    &.cf-normal-fixed-table {
+        table-layout: fixed;
+        thead {
+            display: block;
+        }
+        tbody {
+            display: block;
+            height: 250px;
+            overflow: auto;
+        }
+    }
+}
+
+// 审批各种大统计列表样式
+.cf-list-table {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    font-size: 12px;
+    &.el-table, &.el-table td, &.el-table th.is-leaf,.el-table--border td, .el-table--border th {
+        border: none;
+    }
+    &.el-table .cell {
+        padding: 0 12px;
+        line-height: normal;
+    }
+    .title {
+        color: #4f82c1;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .operator {
+        white-space: nowrap;
+        position: relative;
+        color: #F59C25;
+        cursor: pointer;
+        &:not(:first-child) {
+            margin-left: 12px;
+        }
+        &.delete {
+            color: #f35959;
+        }
+    }
+    // 带指示箭头
+    .cf-triangle-down {
+        color: #F59C25;
+        display: inline-block;
+        transform: scale(.4);
+    }
+    // 第一列是头像
+    &.has-avatar-table {
+        th.is-leaf:first-child .cell{
+            padding-left: 32px;
+        }
+    }
+    .avatar-wrap {
+        padding-left:74px;
+        .avatar {
+            float: left;
+            margin-left: -54px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .avatar-text-cont {
+            line-height: 20px;
+            h4 {
+                font-weight: normal;
+                font-size: 12px;
+                color: #3D464A;
+            }
+            p {
+                color: #98A1A8;
+            }
+        }
+    }
+}
+.text-list-pop.td-text-list-pop {
+    right: 8px;
+    top: 10px;
+}
+
+.td-action-pop-bottom {
+    position: static;
+    font-size: 12px;
+    padding: 0;
+    background: transparent;
+    .text {
+        color: #fff;
+        font-size: 12px;
+    }
+}

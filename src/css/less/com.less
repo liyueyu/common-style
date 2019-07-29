@@ -1,0 +1,655 @@
+/*
+ * 通用的样式全局样式文件
+ * 包括：滚动条样式，文本，快速布局定位类等
+ * 统一非组件样式，关闭按钮，删除按钮，添加按钮等
+*/
+
+@themeColor: #F59C25;
+@themeColorHover: #FF9200;
+@errorColor: #F35959;
+
+// 文本与浮动 ====================
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.clearfix {
+  zoom: 1
+}
+
+.align-middle {
+    vertical-align: middle !important;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-normal-color {
+    color: #3D464A;
+}
+.text-tips {
+    font-size: 12px;
+    color: #98A1A8;
+}
+.text-placeholder {
+    color: #9fa4a6;
+}
+.text-secondary{
+    color: #646B6E;
+}
+.text-warn {
+    color:@errorColor;
+}
+.text-require {
+    color:@errorColor;
+}
+.text-theme {
+    color: @themeColor;
+}
+.file-link {
+    cursor: pointer;
+    color: #345791;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.text-blue {
+    color: #3cbaff;
+}
+.text-a {
+    color: #3D464D;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.text-true {
+    color: #97D325;
+}
+.text-done {
+    color: #32AA70;
+}
+.font-size-12{
+    font-weight: normal;
+    font-size: 12px !important;
+}
+.font-size-14{
+    font-weight: normal;
+    font-size: 14px;
+}
+.font-size-15{
+    font-size: 15px;
+}
+.font-size-16{
+    font-size: 16px;
+}
+.font-size-18{
+    font-size: 18px;
+}
+
+.text-help {
+    cursor: pointer;
+    color: #98A1A8;
+    &:hover {
+        color: @themeColor;
+    }
+}
+.text-hover {
+    cursor: pointer;
+    &:hover {
+        color: @themeColor;
+    }
+}
+.hover-theme:hover {
+    cursor: pointer;
+    color: @themeColor;
+}
+.text-not-cursor {
+    cursor: not-allowed;
+}
+.text-cursor {
+    cursor: pointer;
+}
+.text-strong {
+    font-weight: bold;
+}
+.text-not-strong {
+    font-weight: normal;
+}
+.text-icon-hover {
+    cursor: pointer;
+    .cf-icon {
+        color: #9FA4A6;
+        font-size: 16px;
+    }
+    .text {
+        color: #3D464D;
+    }
+    &:hover {
+        .cf-icon,.text {
+            color: @themeColor;
+        }
+    }
+}
+.text-not-strong {
+    font-weight: normal;
+}
+.position-r {
+    position: relative;
+}
+// hidden
+.display-none {
+    display: none;
+}
+// 间距
+.padding-20 {
+    padding: 20px 0;
+}
+.padding-t-20 {
+    padding-top: 20px;
+}
+.margin-t-12 {
+    margin-top: 12px;
+}
+// border
+.border-t {
+    border-top: 1px solid #e1eaf1;
+}
+.border-b {
+    border-bottom: 1px solid #e1eaf1;
+}
+.border-r {
+    border-right: 1px solid #e1eaf1;
+}
+.border-l {
+    border-left: 1px solid #e1eaf1;
+}
+.has-border-t,
+.has-border-b {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid #E1EAF1;
+    }
+}
+.has-border-t:before {
+    top:0;
+    bottom: auto;
+}
+// 内联元素居中对齐
+.ib-align_center {
+    display: inline-block;
+    vertical-align: middle;
+}
+//水平垂直居中
+.middle-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+}
+// 缩放iconfont
+.iconfont-scale {
+    display: inline-block;
+    font-size: 12px;
+    transform: scale(0.76);
+}
+// 箭头缩放
+.arrow-scale {
+    display: inline-block;
+    color: #98a1a8;
+    font-size: 12px;
+    transform: scale(0.76);
+    cursor: pointer;
+}
+
+// 三角指示箭头
+.triangle-arrow {
+    font-family:"cf-icon" !important;
+    color: #9fa4a6;
+    font-size: 12px;
+    transform: scale(0.6);
+    &:before,&.triangle-arrow-down:before {
+        content: "\e8dd";
+    }
+    &.triangle-arrow-up:before {
+        content: "\e925";
+    }
+  &.triangle-arrow-left:before {
+      content: "\e926";
+  }
+}
+// 关闭按钮
+.close-core {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    transform: scale(.8);
+    color: #c2cbd0;
+    &:hover {
+        cursor: pointer;
+        color: #98a1a8;
+    }
+}
+
+// 三角箭头自由收缩
+.response-arrow {
+    position: absolute;
+    right:0;
+    top: 0;
+    bottom: 0;
+    line-height: 64px;
+    padding: 0 8px;
+    cursor: pointer;
+    &:after {
+        content: "\eb86";
+        font-size: 12px;
+        display: inline-block;
+        max-width: 0.45em;
+        direction: rtl;
+        color: #8E8CA4;
+        overflow: hidden;
+        transition: max-width 0.25s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+    }
+    &:hover {
+        &:after {
+            max-width: 1em;
+        }
+    }
+    &-left{
+        padding: 0 15px;
+        &:after {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+// 跳转到帮助页链接
+.link-help-page{
+    text-decoration: none;
+    color: @themeColor;
+    &:hover {
+        text-decoration: none;
+        color: @themeColorHover;
+    }
+}
+
+// 文本超出隐藏 ====================
+.ellipsis { // 从搬运freeflow 24行
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.ellipsis-2 {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+
+// 自定义滚动条 ====================
+
+::-webkit-scrollbar {
+  overflow: visible;
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-track {
+    background-color:#fff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    //border-color: #EDF0F4;
+    border-color: #fff;
+    border-width: 2px;
+    border-style: solid;
+    background-color:#c2cbd0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #98a1a8;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #748089;
+}
+
+::-webkit-scrollbar-corner {
+  background: #fff;
+}
+.dark {
+    ::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb {
+        background-color: #52506A;
+        border-color:  #434159;
+    }
+    &::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-corner {
+        background-color:#434159;
+    }
+}
+.not-dark {
+    ::-webkit-scrollbar-thumb {
+        background-color:#c2cbd0;
+        border-radius: 5px;
+        border-color: #fff;
+    }
+    &::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-track {
+        background-color:#fff;
+    }
+    ::-webkit-scrollbar-corner {
+        background: #fff;
+    }
+}
+
+// 分页样式
+.page-control {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 12px;
+    .page-btn-group {
+        margin: 0 18px;
+    }
+    .page-action-btn {
+        cursor: pointer;
+        color: #98A1A8;
+        padding: 0 10px;
+        &:hover {
+            color: #F59C25;
+        }
+        &.disabled {
+            opacity: .5;
+            cursor: not-allowed;
+            &:hover {
+                color: #98A1A8;
+            }
+        }
+    }
+    .page-jump {
+        .page-now {
+            cursor: pointer;
+            padding: 0 5px;
+        }
+        .page-number {
+            width: 40px;
+            height: 20px;
+            padding: 0 5px;
+        }
+    }
+    .page-number-set {
+        display: inline-block;
+        position: relative;
+        width: 76px;
+        cursor: pointer;
+        .page-number-select {
+           height: 20px;
+           line-height: 18px;
+            border-radius: 2px;
+           border: 1px solid #e1eaf1;
+            .cf-icon {
+                color: #98A1A8;
+                display: inline-block;
+                transform: scale(0.5);
+            }
+       }
+        .page-number-list {
+            display: none;
+            font-size: 12px;
+            position: absolute;
+            bottom: 100%;
+            margin-bottom: 5px;
+            width: 76px;
+            background: #FFFFFF;
+            border: 1px solid #E1EAF1;
+            box-shadow: 0 1px 6px 0 rgba(49,114,149,0.20);
+            border-radius: 2px;
+            text-align: right;
+            z-index: 4;
+            li {
+                line-height: 26px;
+                padding: 0 10px;
+                &:hover,&.active {
+                  background: #F4F6F9;
+              }
+            }
+        }
+        &.opened {
+            .page-number-select {
+                border-color: #F59C25;
+            }
+            .page-number-list {
+                display: block;
+            }
+        }
+    }
+}
+
+// 开关
+.yun-switch {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    &-checkbox,
+    &-inner {
+        width: 100%;
+        height: 100%;
+    }
+    &-checkbox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+    &-checkbox:checked+&-inner:before {
+        background: #F59C25;
+        border: 2px solid #F59C25;
+    }
+    &-inner:before {
+        content: "";
+        width: 100%;
+        height: 20px;
+        display: block;
+        position: absolute;
+        background: #A8B6C9;
+        border: 2px solid #A8B6C9;
+        border-radius: 15px;
+    }
+    &-checkbox:checked+&-inner:after {
+        right: 0;
+        border: 2px solid #F59C25;
+    }
+    &-inner:after {
+        content: "";
+        position: absolute;
+        border: 2px solid #A8B6C9;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+    }
+    &.is-gray {
+        .yun-switch-inner{
+            &:before {
+                background-color: #424056;
+                border-color: #5a5970;
+            }
+            &:after {
+                ////background-color: #F59C25;
+                //border-color: #F59C25;
+                background-color: #424056;
+                border-color: #5a5970;
+            }
+        }
+        .yun-switch-checkbox:checked + .yun-switch-inner:before {
+            background-color: #F59C25;
+        }
+    }
+}
+.switch-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// 进度条
+
+.progress-bar {
+    height: 3px;
+    border-radius: 2px;
+    background-color: #d5e2ec;
+    width: 200px;
+    margin: 4px 0;
+    position: relative;
+    .progress-value {
+        width:20%;
+        border-radius: 3px;
+        height: 100%;
+        background-color: @themeColor;
+    }
+    .progress-number {
+        position: absolute;
+        right: -38px;
+        top: 50%;
+        margin-top: -8px;
+    }
+}
+
+// cf-list
+.cf-list{
+    &-header {
+        font-size: 14px;
+        padding: 10px 12px;
+        line-height: normal;
+        font-weight: bold;
+        background: #EEF2F7;
+        border-radius: 4px;
+        .checkbox-box {
+            .label {
+                font-size: 14px;
+            }
+            .core {
+                top: 3px;
+            }
+        }
+    }
+    &-sort {
+        cursor: pointer;
+        float: right;
+        .cf-icon {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+    }
+    &-item {
+        font-size: 12px;
+        padding: 10px 12px;
+        line-height: normal;
+        cursor: pointer;
+        .cf-drag {
+            color: #98A1A8;
+            margin-right: 4px;
+        }
+    }
+}
+
+// ul
+ul.detect {
+    font-size: 12px;
+    color: #3D464D;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0 32px;
+    font-weight: bold;
+    .detect-item {
+        small {
+            font-weight: normal;
+            font-size: 12px;
+        }
+        &:before {
+            content: "•";
+            padding-right: 5px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+}
+
+// loading item
+.loading-item {
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    color: @themeColor;
+    .loading-img-small {
+        width: 16px;
+        vertical-align: text-top;
+        margin-right: 6px;
+    }
+    .no-more {
+        cursor: default;
+    }
+}
+
+// avatar core
+.cf-avatar {
+    display: inline-block;
+    .avatar-core {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 40px;
+        height: 40px;
+        display: block;
+        text-align: center;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .info {
+        margin-top: 4px;
+        display: block;
+        font-size: 12px;
+        text-align: center;
+    }
+}
