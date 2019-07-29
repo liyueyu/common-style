@@ -5,6 +5,12 @@
             <p class="f-s-14">包含：页面结构、flex 栅格</p>
             <p class="f-s-14">对应文件 layout.less</p>
         </div>
+        <h3>瀑布流</h3>
+        <div class="column-layout-wrap">
+            <div class="column-item" v-for="idx in 8">
+                <div :style="{height: idx*25 + 'px'}">{{idx}}</div>
+            </div>
+        </div>
         <h3>常见页面结构</h3>
         <div class="layout-wrap">
             <div class="ui-flex-grid vertical-center horizontally-stretch" style="height: 100%">
@@ -120,6 +126,20 @@
             background-color: #e9ecf1;
             &:nth-child(2n) {
                 background-color: #d8d8d8;
+            }
+        }
+    }
+    .column-layout-wrap {
+        column-count: 3;
+        column-width: 120px;
+        .column-item {
+            break-inside: avoid;
+            background-color: #e1eaf1;
+            &:nth-child(2n) {
+                background-color: red;
+            }
+            &:nth-child(3n) {
+                background-color: #32AA70;
             }
         }
     }
