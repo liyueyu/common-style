@@ -1,0 +1,133 @@
+input,textarea {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  outline: none;
+  border: 1px solid @borderColor;
+  border-radius: @borderRadius;
+  background-color: transparent;
+  &:focus {
+    border-color: @theme;
+  }
+}
+.radio-box,.checkbox-box {
+  display: inline-block;
+  font-size: 0;
+  line-height: normal;
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+  vertical-align: top;
+  .core {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid @theme;
+    &:after {
+      display: none;
+    }
+  }
+  .label {
+    font-size: 12px;
+  }
+  &:hover .core {
+    border: 1px solid @theme;
+  }
+  .input{
+    display: none;
+    position: absolute;
+    &:checked + .core {
+      border: 1px solid @theme;
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+.radio-box .core {
+  border-radius: 50%;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 6px;
+    height: 6px;
+    background-color: @theme;
+    border-radius: 50%;
+  }
+}
+
+.checkbox-box .core {
+  &:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 3px;
+    height: 7px;
+    border-bottom: 1px solid @theme;
+    border-right: 1px solid @theme;
+    transform: rotate(45deg);
+  }
+}
+
+.radio-box + .radio-box,
+.checkbox-box + .checkbox-box{
+  margin-left: 24px;
+}
+
+.ui-switch {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  &-checkbox,
+  &-inner {
+    width: 100%;
+    height: 100%;
+  }
+  &-checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+  &-checkbox[disabled]+&-inner {
+    opacity: .5;
+  }
+  &-checkbox:checked+&-inner:before {
+    background: #F59C25;
+    border: 2px solid #F59C25;
+  }
+  &-inner:before {
+    content: "";
+    box-sizing: border-box;
+    width: 100%;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background: #A8B6C9;
+    border: 2px solid #A8B6C9;
+    border-radius: 15px;
+  }
+  &-checkbox:checked+&-inner:after {
+    right: 0;
+    border: 2px solid #F59C25;
+  }
+  &-inner:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid #A8B6C9;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+  }
+}

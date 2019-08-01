@@ -2,7 +2,7 @@
     <div class="layout-page">
         <div class="content-header">
             <h2>Layout <small class="text-secondary f-s-16">- 布局</small></h2>
-            <p class="f-s-14">包含：页面结构、flex 栅格</p>
+            <p class="f-s-14">包含：瀑布流、页面结构、flex 栅格</p>
             <p class="f-s-14">对应文件 layout.less</p>
         </div>
         <h3>瀑布流</h3>
@@ -129,18 +129,12 @@
             }
         }
     }
-    .column-layout-wrap {
-        column-count: 3;
-        column-width: 120px;
-        .column-item {
-            break-inside: avoid;
-            background-color: #e1eaf1;
-            &:nth-child(2n) {
-                background-color: red;
-            }
-            &:nth-child(3n) {
-                background-color: #32AA70;
-            }
+    .column-item {
+        &:nth-child(2n) {
+            background-color: red;
+        }
+        &:nth-child(3n) {
+            background-color: #32AA70;
         }
     }
 </style>
