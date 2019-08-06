@@ -6,8 +6,26 @@
             <p class="f-s-14">对应文件 card.less</p>
         </div>
         <h3>审批项目中的卡片</h3>
-        <div>
-            <cf-card></cf-card>
+        <div class="style-wrap">
+            <cf-card style="width: 240px;" class="mr-12 mb-12"></cf-card>
+            <cf-card style="width: 240px;" class="mr-12 mb-12">
+                <div class="mt-12 ml-12">
+                    <img width="44" src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" alt="">
+                </div>
+                <div class="card-action-btn" slot="rightTop">
+                    <span class="action-btn-item ui-icon ui-star"></span>
+                    <span class="action-btn-item ui-icon ui-like"></span>
+                </div>
+            </cf-card>
+            <cf-card style="width: 240px;" class="mr-12 mb-12">
+                <div class="mt-12 ml-12">
+                    <img width="44" src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" alt="">
+                </div>
+                <div class="card-action-btn" slot="rightTop">
+                    <span class="action-btn-item ui-icon ui-star"></span>
+                    <span class="action-btn-item ui-icon ui-like"></span>
+                </div>
+            </cf-card>
         </div>
         <h3>基础卡片 - <small class="text-secondary">包含头部和内容区域</small></h3>
         <div class="style-wrap">
@@ -47,5 +65,22 @@
     }
     .test-body-class1 {
         padding: 0;
+    }
+    .card-action-btn {
+        font-weight: normal;
+        color: #fff;
+        display: none;
+    }
+    .action-btn-item {
+        line-height: 30px;
+        padding: 8px;
+        font-size: 12px;
+        cursor: pointer;
+        &:hover {
+            color: #F59C25;
+        }
+    }
+    .cf-template-card:hover .card-action-btn {
+        display: block;
     }
 </style>
