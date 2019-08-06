@@ -18,22 +18,26 @@
         </div>
         <h3>大图卡片</h3>
         <div>
-            <!--<card v-for="index in 2"-->
-                  <!--bodyClass="test-body-class1"-->
-                  <!--class="mr-12"-->
-                  <!--type="img">-->
-                <!--<div style="padding: 12px;">-->
-                    <!--<strong>汉堡-经常吃会胖{{index}}</strong>-->
-                <!--</div>-->
-            <!--</card>-->
+            <card v-for="index in 2"
+                  bodyClass="test-body-class1"
+                  class="mr-12"
+                  type="img">
+                <div style="padding: 12px;">
+                    <strong>汉堡-经常吃会胖{{index}}</strong>
+                </div>
+            </card>
         </div>
     </div>
 </template>
 <script>
-    // import Card from "../../../../commonStyle/common-ui/src/components/Card/index";
-    // import CfCard from "../../../../commonStyle/common-ui/src/components/Card/CfCard";
+    import Card from '../../components/Card/index'
+    import CfCard from '../../components/Card/CfCard'
     export default {
-        name: 'cardPage'
+        name: 'cardPage',
+        components: {
+            Card,
+            CfCard
+        }
     }
 </script>
 <style lang="less">
