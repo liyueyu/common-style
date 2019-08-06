@@ -1,9 +1,11 @@
 <template>
-    <Root class="page" />
+  <div id="app">
+    <Root></Root>
+  </div>
 </template>
 
 <script>
-import Root from './pages/Root.vue'
+import Root from './pages/Root'
 
 export default {
   name: 'app',

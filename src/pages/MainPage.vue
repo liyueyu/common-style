@@ -9,11 +9,11 @@
 </template>
 
 <script>
-    import Common from "./cssComponents/Common";
-    import Layout from "./cssComponents/layout";
-    import Buttons from "./cssComponents/Buttons";
-    import Forms from "./cssComponents/Form";
-    import CardPage from "./componentsPage/CardPage";
+    import Common from './common/Common'
+    import Layout from './common/layout'
+    import Buttons from './common/Buttons'
+    import Forms from './common/Form'
+    import CardPage from './common/CardPage'
 
     export default {
         name: 'MainPage',
