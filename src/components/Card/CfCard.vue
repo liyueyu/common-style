@@ -12,7 +12,9 @@
         <div class="cf-card-r-t">
             <slot name="rightTop"></slot>
         </div>
-        <slot name="footer"></slot>
+        <div class="cf-card-footer">
+            <slot name="footer"></slot>
+        </div>
     </div>
 </template>
 

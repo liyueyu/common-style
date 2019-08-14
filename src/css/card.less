@@ -31,6 +31,7 @@
   box-shadow: 0 2px 0 0 rgba(65,64,86,.06);
   border-radius: 4px;
   border: 1px solid @borderColor;
+  cursor: pointer;
   &:hover {
     border-color: @grayBg;
   }
@@ -47,11 +48,34 @@
   }
   // 卡片右上角操作区域
   .cf-card-r-t {
+    display: none;
     position: absolute;
     right: 0;
     top: 0;
-    border-top-right-radius: @borderRadius;
+    border-top-right-radius: @borderRadius - 1;
     border-bottom-left-radius: @borderRadius;
     background-color: @grayBg;
+  }
+  // 卡片底部操作区域（hover出现底部操作项）
+  .cf-card-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: normal;
+    border-bottom-right-radius: @borderRadius - 1;
+    border-bottom-left-radius: @borderRadius - 1;
+    background-color: @grayBg;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    transition: transform ease-in-out .15s;
+  }
+  &:hover {
+    .cf-card-r-t {
+      display: block;
+    }
+    .cf-card-footer {
+      transform: scaleY(1);
+    }
   }
 }
