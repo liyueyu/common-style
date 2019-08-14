@@ -3,7 +3,7 @@
         <div class="content-header">
             <h2>Card <small class="text-secondary f-s-16">- 卡片</small></h2>
             <p class="f-s-14">将内容聚集在卡片容器中展示。</p>
-            <p class="f-s-14">对应文件 card.less</p>
+            <p class="f-s-14">对应组件目录components/Card</p>
         </div>
         <h3>审批项目中的卡片</h3>
         <div class="style-wrap">

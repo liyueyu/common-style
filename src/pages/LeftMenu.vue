@@ -14,7 +14,7 @@
         name: 'LeftMenu',
         data () {
             return {
-                menu: ['common', 'layout', 'button','form', 'card']
+                menu: ['common', 'layout', 'button','form', 'card', 'modal']
             }
         },
         props: {

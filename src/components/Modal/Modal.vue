@@ -11,10 +11,9 @@
             </div>
             <div class="ui-modal-body" :style="{'padding-bottom': btnBar ? '58px' : '0'}">
                 <div class="ui-modal-content-wrap" :class="bodyContentClass">
-
+                    <slot>
+                    </slot>
                 </div>
-                <slot>
-                </slot>
             </div>
             <div class="ui-modal-footer" :class="btnAlign" v-if="btnBar">
                 <slot name="bottomLeft"></slot>
@@ -22,7 +21,7 @@
                     <button class="ui-btn ui-btn-gray"
                             @click="cancel">{{cancelText}}
                     </button>
-                    <button class="ui-btn" :disabled="confirmDisabled"
+                    <button class="ui-btn ui-btn-theme" :disabled="confirmDisabled"
                             @click="confirm">{{confirmText}}
                     </button>
                 </slot>
