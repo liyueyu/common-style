@@ -4905,6 +4905,11 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-web@^5.1.9, lottie-web@^5.5.7:
+  version "5.5.7"
+  resolved "http://172.20.176.77:4873/lottie-web/-/lottie-web-5.5.7.tgz#a8341487be1c31915fb3a784c3ec25fd6c9468df"
+  integrity sha1-qDQUh74cMZFfs6eEw+wl/WyUaN8=
+
 lower-case@^1.1.1:
   version "1.1.4"
   resolved "http://172.20.176.77:4873/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
@@ -7924,7 +7929,7 @@ vue-hot-reload-api@^2.3.0:
   resolved "http://172.20.176.77:4873/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
   integrity sha1-J1b0bLMlgFTF9HI96K5+hzAqHM8=
 
-vue-loader@^15.7.0:
+vue-loader@^15.7.0, vue-loader@^15.7.1:
   version "15.7.1"
   resolved "http://172.20.176.77:4873/vue-loader/-/vue-loader-15.7.1.tgz#6ccacd4122aa80f69baaac08ff295a62e3aefcfd"
   integrity sha1-bMrNQSKqgPabqqwI/ylaYuOu/P0=
@@ -7934,6 +7939,13 @@ vue-loader@^15.7.0:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-lottie@^0.2.1:
+  version "0.2.1"
+  resolved "http://172.20.176.77:4873/vue-lottie/-/vue-lottie-0.2.1.tgz#f9f62c34a276e6834255406118fb05b51f765e4b"
+  integrity sha1-+fYsNKJ25oNCVUBhGPsFtR92Xks=
+  dependencies:
+    lottie-web "^5.1.9"
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
