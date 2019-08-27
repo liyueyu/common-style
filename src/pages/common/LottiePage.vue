@@ -9,7 +9,7 @@
         <lottie-img width="100px"></lottie-img>
         <h3>安装</h3>
         <div>npm install lottie-web</div>
-        <h3>引用方法</h3>
+        <h3>代码</h3>
         <textarea class="code-wrap" style="height: 160px">
              lottie.loadAnimation({
                 container: this.$el.querySelector('#img'),
