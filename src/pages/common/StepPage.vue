@@ -56,14 +56,15 @@
                         time: '2019-08-28',
                         status: 'doing',
                         nodeColor: 'orange',
-                        iconClass: 'ui-icon ui-eyes'
+                        iconClass: 'ui-icon ui-user'
                     },
                     {
                         info: '呵呵呵',
                         time: '2019-08-29',
                         status: 'doing',
                         nodeColor: '#e1eaf1',
-                        iconColor: '#3cbaff'
+                        iconColor: '#3cbaff',
+                        iconClass: 'ui-icon ui-star'
                     }
                 ],
                 timelineAPI: [
