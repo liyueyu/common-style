@@ -7,6 +7,17 @@
         </div>
         <h3>例子</h3>
         <lottie-img width="100px"></lottie-img>
+        <h3>安装</h3>
+        <div>npm install lottie-web</div>
+        <h3>引用方法</h3>
+        <textarea class="code-wrap" style="height: 160px">
+             lottie.loadAnimation({
+                container: this.$el.querySelector('#img'),
+                animationData: imgData,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true
+            })</textarea>
     </div>
 </template>
 <script>

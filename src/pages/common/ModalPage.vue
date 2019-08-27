@@ -13,8 +13,14 @@
         <div>
             <button class="ui-btn ui-btn-gray" @click="showModal2 = true">点击查看百分比窗口</button>
         </div>
+        <h3>引用方法</h3>
+        <textarea class="code-wrap">
+    <modal title="基础窗口"></modal>
+
+    <modal title="百分比窗口" boxWidth="50%" boxHeight="50%" btnAlign="btn-center"></modal>
+        </textarea>
         <modal v-if="showModal1" @close="showModal1 = false"
-            title="默认窗口"></modal>
+            title="基础窗口"></modal>
         <modal v-if="showModal2" @close="showModal2 = false"
             title="百分比窗口" boxWidth="50%" boxHeight="50%" btnAlign="btn-center"></modal>
         <h3>API</h3>
