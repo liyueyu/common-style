@@ -11,12 +11,14 @@
             horizontal : {
                 type: Boolean,
                 default: true
-            }
+            },
+
         }
 
     }
 </script>
 <style lang="less">
+    // 水平垂直的步骤条
     .ui-step-vertical{
         display: flex;
         .ui-step-item {
@@ -36,6 +38,24 @@
         }
         .ui-step-item-wrap {
             margin: 10px 0 0 0;
+        }
+    }
+    // 居中对齐的步骤条
+    .ui-step[align-center] {
+        text-align: center;
+        .ui-step-tail {
+            left: 50%;
+        }
+    }
+    // 块状样式的步骤条
+    .ui-step[block] {
+        background-color: #f4f6fa;
+        text-align: center;
+        .ui-step-tail {
+            display: none;
+        }
+        .ui-step-item {
+            padding-top: 20px;
         }
     }
 </style>

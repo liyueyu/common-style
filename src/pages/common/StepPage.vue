@@ -6,7 +6,7 @@
             <p class="f-s-14">对应组件目录components/Step</p>
         </div>
         <h3>基础用法</h3>
-        <step :horizontal="true">
+        <step>
             <step-item v-for="(item, key) in stepData"
                        :stepKey="key + 1"
                        :nodeColor="item.nodeColor"
@@ -19,7 +19,7 @@
             </step-item>
         </step>
         <h3>带图标的步骤条</h3>
-        <step :horizontal="true">
+        <step>
             <step-item v-for="(item, key) in stepData"
                        :stepKey="key + 1"
                        :iconClass="item.iconClass"
@@ -28,6 +28,45 @@
                        :nodeStatus="item.status">
                 <div slot="content">
                     <div class="f-s-14">步骤{{key + 1}}</div>
+                    <div class="f-s-12">{{item.info}}</div>
+                    <div class="text-secondary">{{item.time}}</div>
+                </div>
+            </step-item>
+        </step>
+        <h3>居中对齐的步骤条</h3>
+        <step align-center>
+            <step-item v-for="(item, key) in stepData"
+                       :stepKey="key + 1"
+                       :nodeColor="item.nodeColor"
+                       :tailColor="item.nodeColor">
+                <div slot="content">
+                    <div class="f-s-14">步骤{{key + 1}}</div>
+                    <div class="f-s-12">{{item.info}}</div>
+                    <div class="text-secondary">{{item.time}}</div>
+                </div>
+            </step-item>
+        </step>
+        <h3>块状的步骤条</h3>
+        <step block>
+            <step-item v-for="(item, key) in stepData"
+                       :stepKey="key + 1"
+                       :nodeColor="item.nodeColor"
+                       :tailColor="item.nodeColor">
+                <div slot="content">
+                    <div class="f-s-14">步骤{{key + 1}}</div>
+                    <div class="f-s-12">{{item.info}}</div>
+                    <div class="text-secondary">{{item.time}}</div>
+                    <span class="step-block-icon text-secondary ui-icon ui-arrow-right"></span>
+                </div>
+            </step-item>
+        </step>
+        <h3>竖状步骤条</h3>
+        <step :horizontal="false">
+            <step-item v-for="(item, key) in stepData"
+                       :stepKey="key + 1"
+                       :nodeColor="item.nodeColor"
+                       :tailColor="item.nodeColor">
+                <div slot="content">
                     <div class="f-s-12">{{item.info}}</div>
                     <div class="text-secondary">{{item.time}}</div>
                 </div>
@@ -78,3 +117,19 @@
         }
     }
 </script>
+
+<style lang="less" scoped>
+    .ui-step {
+        .step-block-icon {
+            position: absolute;
+            font-size: 12px;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .ui-step-item:last-child .step-block-icon {
+            display: none;
+        }
+    }
+
+</style>

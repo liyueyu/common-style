@@ -54,7 +54,7 @@
     }
     .ui-step-tail {
         position: absolute;
-        left: 5px;
+        left: 11px;
         top: 10px;
         height: 100%;
         border-left: 2px solid #e1eaf1;
@@ -81,8 +81,7 @@
         }
     }
     .ui-step-item-wrap {
-        margin-left: 24px;
+        margin-left: 34px;
         position: relative;
-        top: -3px;
     }
 </style>
