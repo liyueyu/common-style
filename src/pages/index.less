@@ -9,12 +9,18 @@ body {
     padding: 20px 30px;
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
-    background-color: #030303 ;
+    color: #000;
+    background-color: #fff ;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   .left-menu {
     width: 220px;
     height: 100%;
+    overflow: hidden;
+    &:hover {
+      overflow: auto;
+    }
   }
   .layout-wrap {
     display: inline-block;

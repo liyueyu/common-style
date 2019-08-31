@@ -9,6 +9,8 @@
         <lottie-page v-if="pageType === 'lottie'"></lottie-page>
         <time-line-page v-if="pageType === 'timeline'"></time-line-page>
         <step-page v-if="pageType === 'step'"></step-page>
+        <tabs-page v-if="pageType === 'tabs'"></tabs-page>
+        <breadcrumb-page v-if="pageType === 'breadcrumb'"></breadcrumb-page>
     </div>
 </template>
 
@@ -20,12 +22,16 @@
     import CardPage from './common/CardPage'
     import ModalPage from './common/ModalPage'
     import LottiePage from './common/LottiePage'
-    import TimeLinePage from "./common/TimeLinePage";
-    import StepPage from "./common/StepPage";
+    import TimeLinePage from './common/TimeLinePage'
+    import StepPage from './common/StepPage'
+    import TabsPage from './common/TabsPage'
+    import BreadcrumbPage from './common/BreadcrumbPage'
 
     export default {
         name: 'MainPage',
         components: {
+            BreadcrumbPage,
+            TabsPage,
             StepPage,
             TimeLinePage,
             LottiePage,

@@ -2,8 +2,7 @@
     <div class="root-page ui-flex-grid vertical-center horizontally-stretch">
       <div class="ui-flex-grid-none ">
           <header class="page-header">
-              Common
-              <!-- Style Doc-->
+              <span class="f-s-18 ui-icon ui-sun"></span>&nbsp;&nbsp;Doc - <small class="f-s-12 text-secondary">神说要有光，于是阳光普照</small>
           </header>
       </div>
       <div class="ui-flex-grid-item ui-flex-grid horizontally-stretch" >

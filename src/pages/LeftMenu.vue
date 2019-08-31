@@ -14,7 +14,8 @@
         name: 'LeftMenu',
         data () {
             return {
-                menu: ['common', 'layout', 'button','form', 'card', 'modal','lottie','timeline','step']
+                menu: ['common', 'layout', 'button','form', 'card', 'modal','lottie','timeline','step',
+                'tabs', 'breadcrumb', 'nav']
             }
         },
         props: {
@@ -30,10 +31,9 @@
 
 <style lang="less" scoped>
     .menu-wrap  {
-        height: 100%;
         padding: 20px 0;
-        overflow: auto;
         font-size: 13px;
+        margin-right: 12px;
         .menu-item {
             height: 44px;
             line-height: 44px;
