@@ -11,6 +11,7 @@
         <step-page v-if="pageType === 'step'"></step-page>
         <tabs-page v-if="pageType === 'tabs'"></tabs-page>
         <breadcrumb-page v-if="pageType === 'breadcrumb'"></breadcrumb-page>
+        <nav-menu-page v-if="pageType === 'nav'"></nav-menu-page>
     </div>
 </template>
 
@@ -26,10 +27,12 @@
     import StepPage from './common/StepPage'
     import TabsPage from './common/TabsPage'
     import BreadcrumbPage from './common/BreadcrumbPage'
+    import NavMenuPage from "./common/NavMenuPage";
 
     export default {
         name: 'MainPage',
         components: {
+            NavMenuPage,
             BreadcrumbPage,
             TabsPage,
             StepPage,
